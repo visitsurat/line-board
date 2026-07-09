@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>เข้าสู่ระบบคิวเยี่ยม-วีดีโอคอล(Line)-วันนี้...</title>
+    <title>เข้าสู่ระบบจองเยี่ยม-วีดีโอคอล (Line)...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* โทนสีหลัก KTB Style */
+        /* โทนสีหลัก LINE Style */
         :root { 
-            --ktb-primary: #2CC3F1; 
-            --ktb-bg: #ECF7FB; 
-            --ktb-dark: #002240; 
+            --line-primary: #06C755; /* สีเขียวของ LINE */
+            --line-hover: #05B34C; 
+            --line-bg: #F5F9F5; /* พื้นหลังสีเขียวอ่อนๆ */
+            --line-dark: #002240; 
         }
         
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--ktb-bg);
+            font-family: 'Sarabun', sans-serif; /* เปลี่ยนมาใช้ฟอนต์สารบรรณให้เป็นมาตรฐานเดียวกัน */
+            background-color: var(--line-bg);
             display: flex;
             justify-content: center;
             align-items: center;
-            color: var(--ktb-dark);
+            color: var(--line-dark);
         }
         
         /* กล่องการ์ดโชว์ข้อความต้อนรับ */
@@ -29,19 +31,19 @@
             background-color: white;
             padding: 40px 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,34,64,0.1);
+            box-shadow: 0 10px 25px rgba(0, 185, 0, 0.1);
             text-align: center;
             width: 85%;
             max-width: 400px;
-            border-top: 5px solid var(--ktb-primary);
+            border-top: 6px solid var(--line-primary);
         }
 
         /* ดีไซน์ตัวหมุน (Spinner) */
         .spinner {
             width: 50px;
             height: 50px;
-            border: 5px solid #e0f3ff;
-            border-top: 5px solid var(--ktb-primary);
+            border: 5px solid #e8f5e9;
+            border-top: 5px solid var(--line-primary);
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin: 0 auto 20px auto;
@@ -53,34 +55,36 @@
         }
 
         .title {
-            font-size: 1.2rem;
-            font-weight: bold;
+            font-size: 1.3rem;
+            font-weight: 600;
             margin-bottom: 10px;
+            color: var(--line-primary); /* ให้ชื่อระบบเป็นสีเขียว */
         }
 
         .subtitle {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin-bottom: 25px;
             line-height: 1.5;
         }
 
         /* ปุ่มเผื่อกรณีที่เบราว์เซอร์ลูกค้าไม่ยอม Redirect อัตโนมัติ */
         .manual-btn {
-            background-color: var(--ktb-dark);
-            color: var(--ktb-primary);
+            background-color: var(--line-primary);
+            color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
-            font-size: 0.9rem;
+            padding: 12px 25px;
+            border-radius: 25px; /* ทำให้ปุ่มมีความโค้งมนเหมือนปุ่มใน LINE */
+            font-size: 0.95rem;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
             transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(6, 199, 85, 0.2);
         }
         .manual-btn:hover {
-            opacity: 0.9;
+            background-color: var(--line-hover);
         }
     </style>
 
@@ -103,11 +107,11 @@
 
     <div class="redirect-card">
         <div class="spinner"></div>
-        <div class="title">กำลังเข้าสู่ระบบคิวเยี่ยม-วีดีโอคอล(Line)</div>
-        <div class="subtitle">ระบบกำลังพาท่านเข้าสู่เครือข่ายอย่างปลอดภัย<br>กรุณารอสักครู่...</div>
+        <div class="title">ระบบจองเยี่ยม-วีดีโอคอล (LINE)</div>
+        <div class="subtitle">ระบบกำลังพาท่านเข้าสู่หน้าจอหลักอย่างปลอดภัย<br>กรุณารอสักครู่...</div>
         
         <!-- ซ่อนปุ่มนี้ไว้เผื่อฉุกเฉินเท่านั้น -->
-        <a href="https://script.google.com/macros/s/AKfycbz70JgDQgzXJI54ySzaGnUNGHlZKnwfI5WYiDL5neKCp6L_mQqZyXMOpdxE5ybip9dL/exec?page=board" class="manual-btn">คลิกที่นี่หากระบบไม่พาไปอัตโนมัติ</a>
+        <a href="https://script.google.com/macros/s/AKfycbz70JgDQgzXJI54ySzaGnUNGHlZKnwfI5WYiDL5neKCp6L_mQqZyXMOpdxE5ybip9dL/exec?page=board" class="manual-btn">คลิกที่นี่หากระบบไม่เปลี่ยนหน้าอัตโนมัติ</a>
     </div>
 
 </body>
